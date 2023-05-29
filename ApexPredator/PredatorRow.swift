@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct PredatorRow: View {
-    @State var image: String
-    @State var title: String
-    @State var type: String
+    let predator: ApexPredator
     
     var body: some View {
         HStack(spacing: 10) {
-            Image(image)
+            Image(predator.link!)
                 .resizable()
                 .frame(width: 100, height: 100)
+                .shadow(color: .white, radius: 5, x: 0, y: 0)
+            
             VStack(alignment: .leading, spacing: 10) {
-                Text(title)
+                Text(predator.name!)
                     .font(.subheadline)
                     .fontWeight(.bold)
-                Text(type)
+                Text(predator.type!)
                     .font(.body)
                     .frame(width: 70, height: 40)
                 
@@ -40,7 +40,10 @@ struct PredatorRow: View {
 
 struct PredatorRow_Previews: PreviewProvider {
     static var previews: some View {
-        PredatorRow(image: "compsognathus", title: "Compsognathus", type: "Land")
+        
+        let apexPredator = ApexPredator(id: 3, link: "dimorphodon", name: "Dimorphodon", type: "Land")
+        PredatorRow(predator: apexPredator)
+            .preferredColorScheme(.dark)
             .previewLayout(.sizeThatFits)
     }
 }

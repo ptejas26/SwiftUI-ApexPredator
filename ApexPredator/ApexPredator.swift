@@ -9,6 +9,16 @@ import Foundation
 
 struct ApexPredator: Codable, Identifiable {
     
+    internal init(id: Int? = nil, link: String? = nil, movieScenes: [MovieScene]? = nil, movies: [String]? = nil, name: String? = nil, type: String? = nil) {
+        self.id = id
+        self.link = link
+        self.movieScenes = movieScenes
+        self.movies = movies
+        self.name = name
+        self.type = type
+    }
+    
+    
     let id : Int?
     let link : String?
     let movieScenes : [MovieScene]?
@@ -24,6 +34,7 @@ struct ApexPredator: Codable, Identifiable {
         case name = "name"
         case type = "type"
     }
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(Int.self, forKey: .id)

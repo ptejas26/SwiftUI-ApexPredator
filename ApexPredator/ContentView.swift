@@ -17,7 +17,8 @@ struct ContentView: View {
                 List {
                     ForEach(apController.apexPredator) { predator in
                         NavigationLink(destination: Text("Dino Details page")) {
-                            PredatorRow(image:"compsognathus", title: predator.name!, type: predator.type!)
+                            Text("test")
+//                            PredatorRow(predator: <#ApexPredator#>, image:"compsognathus", title: predator.name!, type: predator.type!)
                                 .background(Color.black.opacity(0.5))
                         }
                     }
