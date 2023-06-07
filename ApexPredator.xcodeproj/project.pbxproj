@@ -15,6 +15,7 @@
 		96CA5B012A22F84100DB6831 /* ApexPredator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CA5B002A22F84100DB6831 /* ApexPredator.swift */; };
 		96CA5B032A22FBFB00DB6831 /* PredatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CA5B022A22FBFB00DB6831 /* PredatorController.swift */; };
 		96CA5B052A240C3100DB6831 /* PredatorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CA5B042A240C3100DB6831 /* PredatorRow.swift */; };
+		96CA5B072A2456BF00DB6831 /* PredatorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CA5B062A2456BF00DB6831 /* PredatorDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		96CA5B002A22F84100DB6831 /* ApexPredator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApexPredator.swift; sourceTree = "<group>"; };
 		96CA5B022A22FBFB00DB6831 /* PredatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorController.swift; sourceTree = "<group>"; };
 		96CA5B042A240C3100DB6831 /* PredatorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorRow.swift; sourceTree = "<group>"; };
+		96CA5B062A2456BF00DB6831 /* PredatorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredatorDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				96CA5AFE2A22F6FD00DB6831 /* jpapexpredators.json */,
+				96CA5B062A2456BF00DB6831 /* PredatorDetail.swift */,
 				96CA5B042A240C3100DB6831 /* PredatorRow.swift */,
 				96CA5B022A22FBFB00DB6831 /* PredatorController.swift */,
 				96CA5B002A22F84100DB6831 /* ApexPredator.swift */,
@@ -153,6 +156,7 @@
 				96CA5B032A22FBFB00DB6831 /* PredatorController.swift in Sources */,
 				96CA5B012A22F84100DB6831 /* ApexPredator.swift in Sources */,
 				96CA5AF32A22F5FF00DB6831 /* ContentView.swift in Sources */,
+				96CA5B072A2456BF00DB6831 /* PredatorDetail.swift in Sources */,
 				96CA5AF12A22F5FF00DB6831 /* ApexPredatorApp.swift in Sources */,
 				96CA5B052A240C3100DB6831 /* PredatorRow.swift in Sources */,
 			);

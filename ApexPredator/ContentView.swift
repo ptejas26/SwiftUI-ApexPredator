@@ -17,9 +17,8 @@ struct ContentView: View {
                 List {
                     ForEach(apController.apexPredator) { predator in
                         NavigationLink(destination: Text("Dino Details page")) {
-                            Text("test")
-//                            PredatorRow(predator: <#ApexPredator#>, image:"compsognathus", title: predator.name!, type: predator.type!)
-                                .background(Color.black.opacity(0.5))
+                            PredatorRow(predator: predator)
+//                                .background(Color.black.opacity(0.5))
                         }
                     }
                 }
@@ -33,5 +32,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }

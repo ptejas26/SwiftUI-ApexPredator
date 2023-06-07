@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct ApexPredator: Codable, Identifiable {
     
@@ -25,6 +26,15 @@ struct ApexPredator: Codable, Identifiable {
     let movies : [String]?
     let name : String?
     let type : String?
+    
+    func typeOverlay() -> Color {
+        switch type?.lowercased() {
+        case "land": return .brown
+        case "sea": return .blue
+        case "air": return .teal
+        default: return .gray
+        }
+    }
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
