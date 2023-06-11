@@ -15,7 +15,7 @@ struct PredatorRow: View {
             Image((predator.name?.lowercased().filter { $0 != " "})!)
                 .resizable()
                 .frame(width: 100, height: 100)
-                .shadow(color: .white.opacity(0.5), radius: 5, x: 0, y: 0)
+                .shadow(color: .white.opacity(0.7), radius: 5, x: 0, y: 0)
             
             VStack(alignment: .leading, spacing: 10) {
                 Text(predator.name!)

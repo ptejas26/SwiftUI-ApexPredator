@@ -19,7 +19,7 @@ struct ContentView: View {
                         NavigationLink(destination: Text("Dino Details page")) {
                             PredatorRow(predator: predator)
 //                                .background(Color.black.opacity(0.5))
-                        }
+                        }.isDetailLink(true)
                     }
                 }
                 .navigationTitle("Apex Predator")
