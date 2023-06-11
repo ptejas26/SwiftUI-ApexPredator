@@ -39,7 +39,7 @@ struct ApexPredator: Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case link = "link"
-        case movieScenes = "movie_scenes"
+        case movieScenes = "movieScenes"
         case movies = "movies"
         case name = "name"
         case type = "type"
@@ -56,7 +56,12 @@ struct ApexPredator: Codable, Identifiable {
     }
 }
 
-struct MovieScene : Codable {
+struct MovieScene : Codable, Identifiable {
+    internal init(id: Int? = nil, movie: String? = nil, sceneDescription: String? = nil) {
+        self.id = id
+        self.movie = movie
+        self.sceneDescription = sceneDescription
+    }
     
     let id : Int?
     let movie : String?
@@ -65,8 +70,9 @@ struct MovieScene : Codable {
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case movie = "movie"
-        case sceneDescription = "scene_description"
+        case sceneDescription = "sceneDescription"
     }
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(Int.self, forKey: .id)

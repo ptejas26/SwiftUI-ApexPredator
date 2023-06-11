@@ -16,7 +16,7 @@ struct ContentView: View {
             NavigationView {
                 List {
                     ForEach(apController.apexPredator) { predator in
-                        NavigationLink(destination: Text("Dino Details page")) {
+                        NavigationLink(destination: PredatorDetail(predator: predator)) {
                             PredatorRow(predator: predator)
 //                                .background(Color.black.opacity(0.5))
                         }.isDetailLink(true)
@@ -26,6 +26,7 @@ struct ContentView: View {
             }
         }
         .padding()
+        .edgesIgnoringSafeArea(.top)
     }
 }
 
