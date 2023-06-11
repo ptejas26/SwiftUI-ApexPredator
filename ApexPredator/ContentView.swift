@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     let apController = PredatorController()
+    // Add the @State property when it is to be used on the UI and it changes the state of the view
     @State var sortAlphabetical: Bool = false
     @State var currentFilter = "All"
     
