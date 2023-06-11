@@ -10,9 +10,17 @@ import SwiftUI
 struct ContentView: View {
     
     let apController = PredatorController()
+    @State var sortAlphabetical: Bool = false
     
     var body: some View {
-        VStack {
+
+        if sortAlphabetical {
+            apController.sortAlphbetically()
+        } else {
+            apController.sortByFilmName()
+        }
+
+        return VStack {
             NavigationView {
                 List {
                     ForEach(apController.apexPredator) { predator in
@@ -23,6 +31,19 @@ struct ContentView: View {
                     }
                 }
                 .navigationTitle("Apex Predator")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            sortAlphabetical.toggle()
+                        } label: {
+                            if sortAlphabetical {
+                                Image(systemName: "film")
+                            } else {
+                                Image(systemName: "textformat")
+                            }
+                        }
+                    }
+                }
             }
         }
         .padding()
