@@ -15,13 +15,13 @@ struct PredatorDetail: View {
                 Image(predator.type!)
                     .resizable()
                     .scaledToFit()
-                Image((predator.name?.lowercased().filter { $0 != " "})!)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: UIScreen.main.bounds.width/1.5, height: UIScreen.main.bounds.height/4)
-                    .shadow(color: .black, radius: 16, x: 0, y: 0)
-                    .offset(y: -210)
-                    .rotation3DEffect(.degrees(180),axis: (x: 0.0, y: 1.0, z: 0.0))
+                    Image((predator.name?.lowercased().filter { $0 != " "})!)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: UIScreen.main.bounds.width/1.5, height: UIScreen.main.bounds.height/4)
+                        .shadow(color: .black, radius: 16, x: 0, y: 0)
+                        .offset(y: -210)
+                        .rotation3DEffect(.degrees(180),axis: (x: 0.0, y: 1.0, z: 0.0))
             }
             
             VStack(alignment: .leading) {

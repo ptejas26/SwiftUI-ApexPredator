@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct PredatorImageView: View {
-//    let predatorImage: String
+    let predatorImage: String
     var body: some View {
-//        Image(predatorImage)
-//            .resizable()
-//            .scaledToFit()
-        Text("Lets do it")
+        Image(predatorImage)
+            .resizable()
+            .scaledToFit()
+            .rotation3DEffect(.degrees(180),axis: (x: 0.0, y: 1.0, z: 0.0))
+
     }
 }
 
-#Preview {
-//    PredatorImageView(predatorImage: "dimorphodon")
-    PredatorImageView()
+
+struct PredatorImageView_Previews: PreviewProvider {
+    static var previews: some View {
+        PredatorImageView(predatorImage: "tyrannosaurusrex")
+            .preferredColorScheme(.dark)
+    }
 }
